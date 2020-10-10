@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img [src]=""></ion-img>
+    <ion-title>Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br/>
+      <br/>
+  <ion-list>
+      <ion-item *ngFor="let movie of Movies">
+          <ion-grid> 
+              <ion-row align-items-start>
+                <ion-col>
+                  <p id="subline">Nombre</p>
+                    {{movie.name}}
+                </ion-col>
+                <ion-row align-items-center>
+                <ion-col>
+                    <p id="subline">Description</p>
+                    {{movie.description}}
+                </ion-col>
+              </ion-row>
+              </ion-row>
+              <ion-row align-items-start>
+                <ion-col>
+                    <p id="subline">Genero</p>
+                    {{movie.genre}}
+                </ion-col>
+                <ion-col>
+                    <p id="subline">Fecha de lanzamiento</p>
+                    {{movie.release_date}}
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+          <ion-icon (click)="openModal(movie)" name="create" slot="end"></ion-icon>
+          <ion-icon (click)="deleteMovie(movie.id)" name="trash" slot="end"></ion-icon>
+      </ion-item>
+  </ion-list>
+   <br/>
+  <ion-button (click)="insertMovie()" expand="block">Añade una pelicula</ion-button>
+  <br/>
+  <br/>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>

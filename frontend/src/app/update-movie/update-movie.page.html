@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>updateMovie</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="movieUpadteForm" (ngSubmit)="onFormSubmit()">
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <input type="hidden" name="id" fromControlName="id" value={{movieFind.name}}>
+            <ion-input name="name" fromControlName="name" type="text" value={{movieFind.name}}></ion-input>
+            <ion-label position="floating">Nombre :</ion-label>
+            <ion-input name="name" fromControlName="name" type="text" value={{movieFind.name}}></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">genero :</ion-label>
+            <ion-input name="genre" fromControlName="genre" type="text" value={{movieFind.genre}}></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Despricion :</ion-label>
+            <ion-textarea name="description" fromControlName="description" type="text" value={{movieFind.description}}>
+            </ion-textarea>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Fecha de lanzamiento :</ion-label>
+            <ion-input name="release_date" fromControlName="realease_date" type="number"
+              value={{movieFind.release_date}}></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" shape="full" expand="block">actualiza pelicula</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
