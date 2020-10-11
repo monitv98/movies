@@ -45,6 +45,8 @@ To emulate the application with the ionic server, execute:
 $ ionic serve
 ```
 
+## Postman
+[Postman](https://documenter.getpostman.com/view/12915900/TVRkZ7tZ)
 
 ## Built With 🛠️
 
