@@ -2,7 +2,7 @@
 # movie api🎬
  🎥 📽 🎞 🎥 📽 🎞 🎥 📽 🎞 🎥 📽 🎞 🎥 📽 🎞 🎥 📽 🎞🎥 📽 🎞🎥 📽 🎞
 
-Just an example project using Spring as backend and Ionic as frontend.
+Just an example project using Spring as backend and Ionic as frontend.It's a crud about movies.
 
 ## Prerequisites 📄
 
